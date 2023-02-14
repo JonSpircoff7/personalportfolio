@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('SDh6B6knXPTaNC20_');
+        })();
+    </script>
+    <script type="text/javascript">
+       window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+    
+        // these IDs from the previous steps
+        emailjs.sendForm('service_n40p3hh', 'template_8jh0ld7', document.getElementById('contact-form'))
+            .then(function() {
+                console.log('SUCCESS!');
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
+}
+
+    </script>
+    
+</head>
+<body>
+    <main class="home" style="z-index: 2; background-color: transparent;">
+    <nav>
+        <h1 class="header">Jonathan Spircoff</h1>
+        <ul class="navlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#" onclick="document.getElementById('contact-page').scrollIntoView();">Contact</a></li>
+
+        </ul>
+    </nav>
+    <div id="projects">    <div class="wrapper">
+        <svg class="svg" style="position: absolute;
+        width: 474px;
+        top: 20vh;
+        left: 10vw;" viewBox="0 0 900 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z" fill="#D9D9D9"/>
+            <mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="10">
+            <path d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_0_1)">
+            <rect class="mask" y="-49" height="99" fill="black"/>
+            </g>
+            </svg>
+        <div class="container scrollx">
+           
+            <section id="home" class="sec1 pin">
+                <span class="anim">Hey there!</span>
+                <div class="col">
+                    <p>My name is Jonathan Spircoff. I am a technology enthusiast with a passion for constantly learning and exploring new technologies.</p>
+                    <p>I am constantly striving to expand my knowledge and skillset, and I am excited to bring my passion and expertise to new projects and opportunities.
+                    </p> 
+                </div>
+            </section>
+            <section id="aboutme" class="sec2 pin">
+                <span class="anim">About me</span>
+                <div class="col anim">
+                    <p>As a full stack JavaScript developer, I have a passion for creating user-friendly and immersive experiences through the use of technologies such as AI, Three.js, GSAP, and Python. </p>
+                    <p>My goal is to continuously grow my knowledge and expertise in these areas to deliver outstanding results for my clients. I approach each project with confidence, humility, and a strong work ethic, always striving for excellence in everything I do.</p>
+                </div>
+            </section>
+            <section class="sec3 pin">
+                <span class="anim">Projects</span>
+                <div class="col anim">
+                    <div class="flex-container">
+                        <div class="flex-item">
+                          <img src="image1.jpg" alt="Image 1">
+                        </div>
+                        <div class="flex-item">
+                          <img src="image2.jpg" alt="Image 2">
+                        </div>
+                        <div class="flex-item">
+                          <img src="image3.jpg" alt="Image 3">
+                        </div>
+                        <div class="flex-item">
+                          <img src="image4.jpg" alt="Image 4">
+                        </div>
+                      </div>
+                      
+                </div>
+            </section>
+            <section class="sec4 pin">
+                <span class="anim">Lets connect!</span>
+
+                <div class="col anim">
+                    <p>Ready to take the next step and connect with me? Fill out the contact form below to get in touch.</p>
+                </div>
+            </section>
+        </div>
+        <div class="page2">
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <input type="submit" value="Submit">
+              </form>
+              
+              
+              
+            <div class="footer">
+        <h3>Connect with me on social media</h3>
+        <ul>
+            <div class="social">
+                <img src="./assets/icons8-linkedin-16.png"/>
+                <li><a href="https://www.linkedin.com/in/jonathanspircoff/">LinkedIn</a></li>
+            </div>
+            <div class="social">
+                <img src="./assets/icons8-github-16.png"/>
+                <li><a href="https://github.com/JonSpircoff7">GitHub</a></li>
+            </div>
+            <div class="social">
+                <img src="./assets/icons8-instagram-24.png"/>
+                <li><a href="https://instagram.com/jon.spircoff7">Instagram</a></li>
+            </div>
+        </ul>
+    </div>
+        </div>
+    <div id="profilepic">
+        <img src="./assets/thumbnail-removebg-preview.png" alt="Jonathan Spircoff profile picture">     
+    </div>
+    
+    </main>
+        <div id="bkgcontainer">
+        </div>
+    <!-- Intro Page -->
+     <section class="loading">    
+        <span class="welcome">W</span>
+        <span class="welcome">E</span>
+        <span class="welcome">L</span>
+        <span class="welcome">C</span>
+        <span class="welcome">O</span>
+        <span class="welcome">M</span>
+        <span class="welcome">E</span>
+        <span class="welcome">.</span>
+        <span class="welcome">.</span>
+        <span class="welcome">.</span>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
